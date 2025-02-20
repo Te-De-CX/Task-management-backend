@@ -36,7 +36,6 @@ function Home() {
 
     const createNote = (e) => {
         e.preventDefault();
-        console.log({ title, content });  // Log the request body
         api
             .post("/api/notes/", { content, title })
             .then((res) => {
@@ -46,7 +45,6 @@ function Home() {
             })
             .catch((err) => alert(err));
     };
-    
 
     return (
         <div>
